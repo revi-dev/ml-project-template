@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "ml-project"
+version = "0.1.0"
+description = ""
+authors = ["Your Name"]
+
+
+[tool.poetry.dependencies]
+python = ">=3.10, <4.0"
+h5py = "*"
+matplotlib = "*"
+numpy = "*"
+opencv-python = "*"
+pillow = "*"
+polars = "*"
+pyyaml = "*"
+scipy = "*"
+scikit-learn = "*"
+tqdm = "*"
+
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "*"
+notebook = "*"
+ipywidgets = "*"
+mlflow = "*"
