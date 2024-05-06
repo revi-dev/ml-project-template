@@ -5,6 +5,7 @@ services:
       dockerfile: ./environments/Dockerfile
       args:
         - PROJECT_NAME=${PROJECT_NAME}
+        - BASE_IMAGE=${BASE_IMAGE}
         - PYTHON_VERSION=${PYTHON_VERSION}
         - USER_NAME=${USER_NAME}
         - GROUP_NAME=${GROUP_NAME}

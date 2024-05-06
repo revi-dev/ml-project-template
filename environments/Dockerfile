@@ -1,7 +1,6 @@
 ARG BASE_IMAGE
-ARG PYTHON_VERSION
 
-FROM BASE_IMAGE
+FROM ${BASE_IMAGE}
 
 ENV PYTHONUNBUFFERED=1
 
@@ -24,8 +23,10 @@ RUN apt install --no-install-recommends -y \
                 libgl1-mesa-dev libglib2.0-0
 
 # Pythonのインストール
+ARG PYTHON_VERSION
+
 WORKDIR /opt
-RUN wget http://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
+RUN wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
 RUN tar -xvzf Python-${PYTHON_VERSION}.tgz
 
 WORKDIR /opt/Python-${PYTHON_VERSION}
